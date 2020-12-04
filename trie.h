@@ -9,6 +9,7 @@ private:
         // opcion1: list<pair<char, TrieNode*>> children;
         // opcion2: map<char, TrieNode*> children;        
         bool endWord;
+        string preffix;
 
         TrieNode(){                        
             endWord = false;            
