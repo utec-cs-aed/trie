@@ -1,34 +1,26 @@
-#include "trie.h"
+#include <vector>
+#include "triesimple.h"
+#include "triepatricia.h"
+#include "tester.h"
 
-int main(int argc, char const *argv[]){
+using namespace std;
 
-    Trie *trie = new Trie();
-    int n;
-    string key;
-    cin >> n;
-    for (int i = 0; i < n; i++)
-    {
-        cin >> key;
-        trie->insert(key);
-    }
+void testTrie(Trie* trie, vector<string> diccionario){
+    for(string word : diccionario)
+        trie->insert(word);
+    ASSERT(trie->display() == "amiga amor amorcito amorfo rata roma romano romario rosario ", "The function insert is not working");
+    ASSERT(trie->search("amor") == true, "The function search is not working");
+    ASSERT(trie->search("rosa") == false, "The function search is not working");
+    trie->remove("roma");
+    trie->remove("amorfo");
+    ASSERT(trie->display() == "amiga amor amorcito rata romano romario rosario ", "The function remove is not working");
+}
+
+int main(){
+    vector<string> diccionario = {"romano", "roma", "romario", "rosario", "rata", "amor", "amorfo", "amorcito", "amiga"};
     
-    int option = atoi(argv[1]);
-    switch (option)
-    {
-        case 1:
-            trie->display();
-            break;
-        case 2:
-            cin>>key;
-            cout << trie->search(key);
-            break; 
-        case 3:
-            cin>>key;
-            trie->remove(key);
-            cin>>key;
-            trie->remove(key);
-            trie->display();
-            break;
-    }
+    testTrie(new TrieSimple(), diccionario);
+    testTrie(new TriePatricia(), diccionario);
+    
     return 0;
 }
