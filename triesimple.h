@@ -21,9 +21,12 @@ public:
     TrieSimple(): root(nullptr) {}
 
     void insert(string key);
+
     bool search(string key);
+
     void remove(string key);    
     
     //imprimir ordenado linea por linea 
     string display();
+
 };

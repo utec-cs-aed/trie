@@ -3,13 +3,13 @@
 # Trie
 
 Se le pide implementar lo siguiente:
-- Trie en su versián simple usando un Array estático para gestionar los hijos (triesimple.h)
+- Trie en su versión simple usando un Array estático para gestionar los hijos (triesimple.h)
 - Trie compacto (Patricia) usando un Array estático para gestionar los hijos (triepatricia.h)
 - Variantes de Patricia usando List y Map para gestionar los hijos. 
 
-Asegúrese que los algoritmos funcionen y luego realizar un análisis experimental variando el tamaño del diccionario.
+Asegúrese que los algoritmos funcionen y luego realizar un análisis experimental variando el tamaño del diccionario (N). Deben definir su marco experimental.
 
-## Cuadro experimental del efecto de compactación 
+## Análisis experimental del efecto de compactación en el Trie
 | N    | Trie Simple | Trie Patricia |
 |------|-------------|---------------|
 | 10^1 |             |               |
@@ -23,7 +23,7 @@ Asegúrese que los algoritmos funcionen y luego realizar un análisis experiment
 
 > Gráfico
 
-## Cuadro comparativo  de Trie Patricia usando List vs Map
+## Cuadro comparativo de Trie Patricia usando List vs Map
 | N    | Trie Patricia - List | Trie Patricia - Map |
 |------|----------------------|---------------------|
 | 10^1 |                      |                     |
@@ -37,5 +37,6 @@ Asegúrese que los algoritmos funcionen y luego realizar un análisis experiment
 
 > Gráfico
 
+**Colocar en las celdas el tiempo de computo que se tomaria el algoritmo de búsqueda.**
 
 NOT DELETE OR MODIFY  THE MAIN FILE. 
